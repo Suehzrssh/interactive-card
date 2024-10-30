@@ -2,6 +2,7 @@ import Card from './components/Card';
 import Form from './components/Form';
 import { FileContext } from './components/FileContext';
 import { useState } from 'react';
+import mainDsk from './images/bg-main-desktop.png';
 import './App.scss';
 
 function App() {
@@ -56,7 +57,7 @@ function App() {
         errorMsg, setErrorMsg
         }}>
         <div className="container">
-          <img className='bgImage' src="/images/bg-main-desktop.png" alt="" />
+          <img className='bgImage' src={mainDsk} alt="" />
           <Form />
           <Card />
         </div>

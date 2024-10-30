@@ -1,6 +1,9 @@
 import React,{useContext} from 'react';
 import { FileContext } from './FileContext';
 import '../scss/Card.scss';
+import cardLogo from '../images/card-logo.svg';
+import frontBg from '../images/bg-card-front.png';
+import backBg from '../images/bg-card-back.png';
 
 
 const Card = () => {
@@ -12,9 +15,9 @@ const Card = () => {
   return (
     <div className='CardDiv'>
         <div className="front">
-          <img className='bg-card' src="/images/bg-card-front.png" alt="" />
+          <img className='bg-card' src={frontBg} alt="" />
           <div className="cardItem">
-            <img src="/images/card-logo.svg" alt="" />
+            <img src={cardLogo} alt="" />
           </div>
           <div className="cardInfo">
             <div className="number">
@@ -31,7 +34,7 @@ const Card = () => {
           </div>
         </div>
         <div className="back">
-          <img className='bg-card' src="/images/bg-card-back.png" alt="" />
+          <img className='bg-card' src={backBg} alt="" />
           <p>{cvv || '000'}</p>
         </div>
     </div>
