@@ -1,0 +1,134 @@
+.formPage {
+    width: 40vw;
+    height: auto;
+    display: flex;
+    font-family: "Space Grotesk", sans-serif;
+    font-style: normal;
+
+    form {
+        position: relative;
+        width: 60%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 10px 20px;
+        gap: 40px;
+
+        .error {
+            color: red;
+            text-transform: capitalize;
+            font-size: 12px;
+            display: none;
+        }
+
+        label {
+            font-family: "Space Grotesk", sans-serif;
+            text-transform: uppercase;
+            font-style: normal;
+            font-size: 14px;
+        }
+        input {
+            height: 40px;
+            padding: 10px;
+            outline: none;
+            border: 1px solid hsl(279, 6%, 55%);
+
+            &:invalid ~ .error{
+                display: block;
+            }
+            &:focus {
+                border-width: 2px;
+                border-image-source: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+                border-image-slice: 1;
+            }
+        }
+
+        .item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+
+            .error {
+                position: absolute;
+                top: 75px;
+            }
+        }
+
+        .bottomForm {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 37px;
+
+            .expDate {
+                position: relative;
+                display: flex;
+                width: 150px;
+                flex-direction: column;
+                gap: 10px;
+
+                .error {
+                    position: absolute;
+                    top: 75px;
+                }
+
+                .expInps {
+                    display: flex;
+                    gap: 10px;
+
+                    input {
+                        width: 60px;
+                    }
+                }
+            }
+            .cvv {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .error {
+                    position: absolute;
+                    top: 75px;
+                    width: 200px;
+                }
+                input {
+                    width: 100px;
+                }
+            }
+        }
+        .btn {
+            width: 100%;
+            height: 50px;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            background-color: hsl(278, 68%, 11%);
+            color: white;
+            cursor: pointer;
+            transition: .3s;
+            border: none;
+            border-radius: 10px;
+
+            &:hover {
+                background-color: hsl(278, 30%, 33%);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .formPage {
+        width: 100%;
+        height: auto;
+        margin-top: 70px;
+        background-color: white;
+
+        form {
+            width: 100%;
+        }
+    }
+}

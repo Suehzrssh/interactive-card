@@ -1,0 +1,135 @@
+.CardDiv {
+    width: 30vw;
+    height: 90%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    top: 60px;
+    font-family: "Space Grotesk", sans-serif;
+    font-style: normal;
+    left: 100px;
+
+    .bg-card {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .front {
+        width: 90%;
+        height: 40%;
+        border-radius: 10px;
+        position: relative;
+
+        .cardItem {
+            position: absolute;
+            top: 0;
+            padding: 15px;
+        }
+        .cardInfo {
+            width: 100%;
+            position: absolute;
+            top: 110px;
+            color: hsl(0%, 0%, 100%);
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .number {
+                font-size: 20px;
+            }
+
+
+            .info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h2 {
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    font-size: 20px;
+                }
+
+                .expInps {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .back {
+        width: 90%;
+        height: 40%;
+        border-radius: 10px;
+        position: relative;
+        margin-left: 120px;
+
+        p {
+            position: absolute;
+            color: hsl(0%, 0%, 100%);
+            top: 95px;
+            right: 30px;
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .CardDiv {
+        width: 90%;
+        width: 80%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0;
+        padding: 0;
+        margin: 0;
+
+        .front {
+            position: absolute;
+            top: 160px;
+            left: 30px;
+            z-index: 1;
+            height: 35%;
+
+            .cardItem {
+                img {
+                    width: 50px;
+                }
+            }
+
+            .cardInfo {
+                top: 90px;
+
+                .number {
+                    font-size: 16px;
+                }
+                .info {
+                    h2 {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+        }
+        .back {
+            position: absolute;
+            top: 30px;
+            left: 90px;
+            padding: 0;
+            margin: 0;
+            height: 35%;
+
+            p{
+                top: 83px;
+                right: 40px;
+            }
+        }
+    }
+}
